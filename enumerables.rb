@@ -67,6 +67,7 @@ def average_heat_level(spicy_foods)
 end
 
 arr = [1,2,3,4,5,6]
+arr_of_obj = [{test: 'hi'}, {goodbye: 'goodbye'}]
 
 def max_product arr
   return arr if arr.length <= 2 
@@ -83,3 +84,4 @@ def max_product arr
 end
 
 puts max_product(arr)
+arr_of_obj.each {|obj| puts obj.values}
