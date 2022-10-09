@@ -66,4 +66,20 @@ def average_heat_level(spicy_foods)
   spicy_foods.sum {|food| food[:heat_level]}/spicy_foods.length
 end
 
+arr = [1,2,3,4,5,6]
 
+def max_product arr
+  return arr if arr.length <= 2 
+  maxProd = -Float::INFINITY
+  arr.each_with_index do |num1, index|
+    arr.slice(index+1, arr.length).each_with_index do |num2, index|
+      if num1.class == Integer && num2.class == Integer
+        maxProd = [maxProd, num1 * num2].max()
+      end
+    end
+  end
+
+  return maxProd
+end
+
+puts max_product(arr)
